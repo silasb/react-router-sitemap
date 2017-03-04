@@ -7,16 +7,15 @@ describe('rules applier', () => {
 
 		const path = '/path/:param-one/:param-two';
 		const rules = [
-			{ 'param-one': 1, 'param-two': 2 },
+			{ 'param-one': 1, 'param-two': 2, siteMap: { changefreq: 'monthly' } },
 			{ 'param-one': 3, 'param-two': 4 },
 		];
 		const etalon = [
-			'/path/1/2',
-			'/path/3/4',
+			{ url: '/path/1/2', changefreq: 'monthly' },
+			{ url: '/path/3/4' },
 		];
 
 		expect(applyRules(path, rules)).toHaveSameItems(etalon, true);
-
 	});
 
 });

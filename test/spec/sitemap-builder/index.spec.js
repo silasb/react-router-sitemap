@@ -6,7 +6,10 @@ describe('sitemap builder', () => {
 	it('should build the sitemap', () => {
 
 		const paths = [
-			'/hello/',
+			{
+				url: '/hello/',
+				changefreq: 'daily'
+			}
 		];
 
 		const hostname = 'http://localhost';
@@ -17,6 +20,7 @@ describe('sitemap builder', () => {
 			urls: [
 				{
 					url: '/hello/',
+					changefreq: 'daily'
 				}
 			],
 			cacheResetPeriod: 0,

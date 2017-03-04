@@ -10,7 +10,7 @@ describe('rule applier', () => {
 			'param-one': 1,
 			'param-two': 2,
 		};
-		const etalon = ['/path/1/2'];
+		const etalon = [{ url: '/path/1/2' }];
 
 		expect(applyRule(path, rule)).toHaveSameItems(etalon, true);
 

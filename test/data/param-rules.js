@@ -1,7 +1,7 @@
 export default {
 
 	'/path-two/sub-path-two/:subParam': [
-		{ subParam: 1 },
+		{ subParam: 1, siteMap: { hello: 'world' } },
 	],
 
 	'/path-three/sub-path-three/:subParam': [
